@@ -2,13 +2,16 @@
 
 <div class="container">
   <div>
-    <img alt="<%- beer.name %>" src="<%- beer.image_url %>" />
+    <a href="/beers/<%= beer.id %>">
+      <img alt="<%- beer.name %>" src="<%- beer.image_url %>" />
+    </a>
   </div>
   <div>
-    <h1><%- beer.name %></h1>
+    <a href="/beers/<%= beer.id %>">
+      <h1><%- beer.name %></h1>
+    </a>
     <h3><%- beer.tagline %></h3>
     <p><%- beer.description %></p>
   </div>
 </div>
-
 <% }) %>

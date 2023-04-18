@@ -31,8 +31,18 @@ app.get('/random-beer', (req, res) => {
     .getRandom()
     .then(responseFromAPI => {
       // your magic happens here
-      console.log(responseFromAPI);
+
       res.render('random-beer', { beers: responseFromAPI });
+    })
+    .catch(error => console.log(error));
+});
+
+app.get('/beers/:id', (req, res) => {
+  punkAPI
+    .getBeer(req.params.id)
+    .then(idbeerFromApi => {
+      console.log(idbeerFromApi);
+      res.render('beersid', { beers: idbeerFromApi });
     })
     .catch(error => console.log(error));
 });
