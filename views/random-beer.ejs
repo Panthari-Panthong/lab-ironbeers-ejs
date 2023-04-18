@@ -1,0 +1,10 @@
+<h1><%- randomBeer[0].name %></h1>
+<p><%- randomBeer[0].description %></p>
+<p><%- randomBeer[0].tagline %></p>
+<h2>Food pairing</h2>
+<ul>
+  <% randomBeer[0].food_pairing.forEach(food => { %>
+  <li><%- food %></li>
+  <% }) %>
+</ul>
+<p><%- randomBeer[0].brewers_tips %></p>
